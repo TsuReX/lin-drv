@@ -1,0 +1,3 @@
+obj-m := @PROJECT_NAME@.o
+
+ccflags-y += -I@CMAKE_BINARY_DIR@ -I@COMMON_HEADERS_DIR@

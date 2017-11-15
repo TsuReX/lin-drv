@@ -1,0 +1,10 @@
+#ifndef _MVS_VERSION_H
+#define _MVS_VERSION_H
+
+/** Длинный идентификатор ревизии в Mercurial. */
+#define MVS_MERCURIAL_LONG_CHANGESET	@MERCURIAL_LONG_CHANGESET@
+/** Короткий идентификатор ревизии в Mercurial. */
+#define MVS_MERCURIAL_SHORT_CHANGESET	@MERCURIAL_SHORT_CHANGESET@
+
+#endif /* _MVS_VERSION_H */
+

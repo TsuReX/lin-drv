@@ -1,0 +1,31 @@
+LIBRARY
+EXPORTS
+	OpenInterface
+	CloseInterface
+	GetVer
+	WriteCOReg
+	WriteCOCmd
+	ReadCOReg
+	ReadCOCmd
+	WriteBufferCOReg
+	WriteBufferCODataReg
+	ReadBufferCOReg
+	ReadBufferCODataReg
+	WriteCOMem32
+	ReadCOMem32
+	ReadMem64Fast
+	WriteMem64Fast
+	ReadMem64
+	WriteMem64
+	ReadDMCReg64
+	WriteDMCReg64
+	RunDMC
+	RunAllDMC
+	WaitEndStatus
+	GlobalReset
+	LoadFileFast
+	SpecBuffAlloc
+	SpecBuffFree
+	ReadBAR3
+	WriteBAR3
+

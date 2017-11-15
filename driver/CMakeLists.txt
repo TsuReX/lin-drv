@@ -8,9 +8,10 @@ if(UNIX)
 
 	# Configure a Kbuild file.
 	configure_file("${CMAKE_CURRENT_SOURCE_DIR}/Kbuild.in" "${CMAKE_CURRENT_BINARY_DIR}/Kbuild" @ONLY NEWLINE_STYLE UNIX)
-
+	
 	# Задаем списки исходных текстов.
-	set(SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/MVS.c)
+	#set(SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.c)
+	file (GLOB SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.*)
 
 	# A Makefile is only responsible for building objects in its own directory.
 	foreach(_file ${SOURCES})

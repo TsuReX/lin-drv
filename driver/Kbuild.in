@@ -1,3 +1,4 @@
+@PROJECT_NAME@-y := mvs_fops.o mvs_pci_ops.o main.o
 obj-m := @PROJECT_NAME@.o
 
 ccflags-y += -I@CMAKE_BINARY_DIR@ -I@COMMON_HEADERS_DIR@

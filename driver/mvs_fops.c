@@ -1,6 +1,7 @@
 #include <linux/pci.h>
 #include <linux/fs.h>
 #include <linux/uaccess.h>
+#include <linux/pagemap.h>
 #include <asm-generic/errno.h>
 
 #include <linux/fcntl.h>
@@ -8,7 +9,7 @@
 
 #include "mvs_pci_ops.h"
 #include "mvs_fops.h"
-#include "mvs_types_linux.h"
+#include "mvs_types.h"
 #include "mvs_version.h"
 #include "mvs_general.h"
 

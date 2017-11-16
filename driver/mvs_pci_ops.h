@@ -1,6 +1,7 @@
 #ifndef DRIVER_MVS_PCI_OPS_H_
 #define DRIVER_MVS_PCI_OPS_H_
 
+#include "mvs_general.h"
 
 int mvs_init_one(struct pci_dev *pdev, const struct pci_device_id *ent);
 void mvs_remove_one(struct pci_dev *pdev);

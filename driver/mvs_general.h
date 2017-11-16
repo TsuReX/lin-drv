@@ -1,12 +1,18 @@
 #ifndef DRIVER_MVS_GENERAL_H_
 #define DRIVER_MVS_GENERAL_H_
 
+#include <linux/pci.h>
+#include <linux/mutex.h>
 #include <linux/types.h>
+#include <linux/mm_types.h>
+#include <linux/completion.h>
+#include <linux/scatterlist.h>
+#include <linux/miscdevice.h>
 #include <asm-generic/param.h>
 
 #define DRIVER_NAME	"MVS"
 #define DEVICE_NAME	"MVSDEV"
-#define DRIVER_VERSION	"2.1.0, changeset: " __MODULE_STRING(MVS_MERCURIAL_LONG_CHANGESET) ", revision: " __MODULE_STRING(MVS_MERCURIAL_SHORT_CHANGESET)
+#define DRIVER_VERSION	"0.0.1, changeset: " __MODULE_STRING(MVS_MERCURIAL_LONG_CHANGESET) ", revision: " __MODULE_STRING(MVS_MERCURIAL_SHORT_CHANGESET)
 
 #define SGDRV_RD_EXEC	(1U << 31)
 #define SGDRV_WR_EXEC	(1U << 30)
@@ -24,9 +30,7 @@
 #define ERROR(d, fmt, args...)	dev_err(&(d)->dev, fmt, ## args)
 #define INFO(d, fmt, args...)	dev_info(&(d)->dev, fmt, ## args)
 
-
-
-static struct mvs_dev {
+ struct mvs_dev {
 	struct pci_dev      *pdev;
 	struct miscdevice    misc;
 	uint32_t __iomem    *bar_addr[3];
@@ -36,6 +40,6 @@ static struct mvs_dev {
 	struct completion    completion;
 	struct page         *user_pages[DMABUFFSIZE];
 	struct scatterlist   sglist[DMABUFFSIZE];
-} dev;
+};
 
 #endif /* DRIVER_MVS_GENERAL_H_ */

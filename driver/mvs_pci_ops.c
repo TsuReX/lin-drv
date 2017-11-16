@@ -4,6 +4,7 @@
 #include <linux/stat.h>
 #include <asm-generic/errno-base.h>
 
+#include "mvs_fops.h"
 #include "mvs_pci_ops.h"
 #include "mvs_general.h"
 
